@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram bot @photoimpulsbot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/photoimpuls-bot
+ExecStart=/root/photoimpuls-bot/venv/bin/python bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
